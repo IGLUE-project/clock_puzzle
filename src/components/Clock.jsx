@@ -11,7 +11,12 @@ export default function Clock({ theme, setTime, dropHandle, solved, config }) {
   const dragging = useRef(null);
 
   useEffect(() => {
-    setTime(angleToTime(angles.hour, 12), angleToTime(angles.second, 60), angleToTime(angles.minute, 60));
+    setTime(
+      angleToTime(angles.hour, 12),
+      angleToTime(angles.second, 60),
+      angleToTime(angles.minute, 60),
+      dragging.current,
+    );
   }, [angles]);
 
   useEffect(() => {
