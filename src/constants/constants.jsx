@@ -1,6 +1,6 @@
 export const DEFAULT_APP_SETTINGS = {
   skin: "STANDARD",
-  actionWhenLoadingIfSolved: true,
+  actionWhenLoadingIfSolved: false,
   useSeconds: true,
   initialTime: "5:30:00", //Initial time in format "HH:MM:SS" or "HH:MM"
   backgroundImg: "images/basic_background.jpg",
@@ -14,25 +14,14 @@ export const DEFAULT_APP_SETTINGS = {
 };
 
 export const THEMES = {
-  BASIC: "BASIC",
-  FUTURISTIC: "FUTURISTIC",
   STANDARD: "STANDARD",
   RETRO: "RETRO",
+  FUTURISTIC: "FUTURISTIC",
 };
 
 export const ICONS = ["circle", "triangle", "square", "pentagon", "star", "hexagon"];
 
 export const THEME_ASSETS = {
-  [THEMES.RETRO]: {
-    backgroundImg: "images/retro_background.png",
-    hourImg: "images/retro_hourhand.png",
-    minuteImg: "images/retro_minutehand.png",
-    secondImg: "images/retro_secondhand.png",
-    clockImg: "images/retro_clock.png",
-    clockCenterImg: "images/retro_clockcenter.png",
-    tickAudio: "sounds/tick.wav",
-    winAudio: "sounds/win.wav",
-  },
   [THEMES.STANDARD]: {
     backgroundImg: "images/basic_background.jpg",
     hourImg: "images/basic_hourhand.png",
@@ -40,6 +29,16 @@ export const THEME_ASSETS = {
     secondImg: "images/basic_secondhand.png",
     clockImg: "images/basic_clock.png",
     clockCenterImg: "images/basic_clockcenter.png",
+    tickAudio: "sounds/tick.wav",
+    winAudio: "sounds/win.wav",
+  },
+  [THEMES.RETRO]: {
+    backgroundImg: "images/retro_background.png",
+    hourImg: "images/retro_hourhand.png",
+    minuteImg: "images/retro_minutehand.png",
+    secondImg: "images/retro_secondhand.png",
+    clockImg: "images/retro_clock.png",
+    clockCenterImg: "images/retro_clockcenter.png",
     tickAudio: "sounds/tick.wav",
     winAudio: "sounds/win.wav",
   },
@@ -58,4 +57,5 @@ export const THEME_ASSETS = {
 export const ESCAPP_CLIENT_SETTINGS = {
   imagesPath: "./images/",
 };
+
 export const MAIN_SCREEN = "MAIN_SCREEN";

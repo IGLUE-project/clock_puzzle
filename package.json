@@ -6,7 +6,7 @@
   "license": "GNU General Public License v3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iglue-project/decoder_disk_puzzle"
+    "url": "https://github.com/iglue-project/clock_puzzle"
   },
   "type": "module",
   "scripts": {

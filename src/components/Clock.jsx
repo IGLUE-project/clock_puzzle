@@ -88,7 +88,7 @@ export default function Clock({ theme, setTime, dropHandle, solved, config }) {
 
   const angleToTime = (angle, max) => {
     let adjusted = ((angle % 360) + 360) % 360;
-    return Math.floor((adjusted / 360) * max) % max;
+    return Math.round((adjusted / 360) * max) % max;
   };
 
   return (
