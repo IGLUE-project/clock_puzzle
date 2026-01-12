@@ -3,7 +3,7 @@ export const DEFAULT_APP_SETTINGS = {
   actionWhenLoadingIfSolved: false,
   useSeconds: true,
   initialTime: "5:30:00", //Initial time in format "HH:MM:SS" or "HH:MM"
-  backgroundImg: "images/basic_background.jpg",
+  backgroundImg: "images/basic_background.png",
   hourImg: "images/basic_hourhand.png",
   minuteImg: "images/basic_minutehand.png",
   secondImg: "images/basic_secondhand.png",
@@ -23,7 +23,7 @@ export const ICONS = ["circle", "triangle", "square", "pentagon", "star", "hexag
 
 export const THEME_ASSETS = {
   [THEMES.STANDARD]: {
-    backgroundImg: "images/basic_background.jpg",
+    backgroundImg: "images/basic_background.png",
     hourImg: "images/basic_hourhand.png",
     minuteImg: "images/basic_minutehand.png",
     secondImg: "images/basic_secondhand.png",

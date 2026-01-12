@@ -18,6 +18,86 @@
   }
 }
 
+.hand {
+  position: absolute;
+  left: 50%;
+  transform-origin: center bottom;
+  transform: rotate(0deg);
+  cursor: grab;
+  &.solved {
+    transition: transform 1.5s ease-in-out;
+  }
+  &.dragging {
+    cursor: grabbing;
+  }
+  &.neon {
+    background: #cc66ff;
+    box-shadow: 0 0 10px #cc66ff, 0 0 20px #cc66ff, 0 0 30px #cc66ff;
+    border-radius: 50px;
+    pointer-events: auto;
+  }
+
+  &.hour {
+    height: 30%;
+    top: 20%;
+    left: 48.5%;
+    &.neon {
+      left: 49%;
+      width: 15px;
+    }
+  }
+
+  &.minute {
+    height: 40%;
+    top: 10%;
+    left: 48.7%;
+    &.neon {
+      left: 49.5%;
+      width: 10px;
+    }
+  }
+
+  &.second {
+    height: 45%;
+    top: 5%;
+    left: 49.5%;
+    &.neon {
+      width: 5px;
+      background: #ff66ff;
+      box-shadow: 0 0 10px #ff66ff, 0 0 20px #ff66ff, 0 0 30px #ff66ff;
+    }
+  }
+}
+
+.standard .clock {
+  height: 100%;
+  .center {
+    top: 50%;
+    left: 50%;
+    height: 7%;
+  }
+
+  .hand {
+    &.hour {
+      height: 35%;
+      top: 15.6%;
+      left: 46.0%;
+    }
+
+    &.minute {
+      height: 39%;
+      top: 10%;
+      left: 47.5%;
+    }
+
+    &.second {
+      height: 39.3%;
+      top: 10%;
+      left: 48.0%;
+    }
+  }
+}
+
 .retro .clock {
   height: 100%;
   width: auto;
@@ -45,61 +125,6 @@
       height: 37%;
       top: 13.5%;
       left: 48.4%;
-    }
-  }
-}
-
-.hand {
-  position: absolute;
-  left: 50%;
-  transform-origin: center bottom;
-  transform: rotate(0deg);
-  cursor: grab;
-
-  &.solved {
-    transition: transform 1.5s ease-in-out;
-  }
-
-  &.dragging {
-    cursor: grabbing;
-  }
-
-  &.neon {
-    background: #cc66ff;
-    box-shadow: 0 0 10px #cc66ff, 0 0 20px #cc66ff, 0 0 30px #cc66ff;
-    border-radius: 50px;
-    pointer-events: auto;
-  }
-
-  &.hour {
-    height: 30%;
-    top: 20%;
-    left: 48.5%;
-    &.neon {
-      left: 49%;
-      width: 15px;
-    }
-  }
-
-  &.minute {
-    height: 40%;
-    top: 10%;
-    left: 48.7%;
-
-    &.neon {
-      left: 49.5%;
-      width: 10px;
-    }
-  }
-
-  &.second {
-    height: 45%;
-    top: 5%;
-    left: 49.5%;
-    &.neon {
-      width: 5px;
-      background: #ff66ff;
-      box-shadow: 0 0 10px #ff66ff, 0 0 20px #ff66ff, 0 0 30px #ff66ff;
     }
   }
 }
