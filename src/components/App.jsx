@@ -141,13 +141,13 @@ export default function App() {
     const pad = (n) => n.toString().padStart(2, "0");
     let solutionStr = `${hour}:${pad(minutes)}`;
     if (appSettings.useSeconds) solutionStr += `:${pad(seconds)}`;
-
     Utils.log("solution: ", solutionStr);
-
     return checkResult(solutionStr);
   }
 
   function checkResult(_solution) {
+    const escappSettings = escapp.getSettings();
+    if ((!escappSettings.linkedPuzzleIds || escappSettings.linkedPuzzleIds.length === 0)) return;
     escapp.checkNextPuzzle(_solution, {}, (success, erState) => {
       Utils.log("Check solution Escapp response", success, erState);
       if (success) {
