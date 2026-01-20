@@ -121,15 +121,13 @@ export default function App() {
     //Init internacionalization module
     I18n.init(_appSettings);
 
-    if (typeof _appSettings.message !== "string") {
-      _appSettings.message = I18n.getTrans("i.message");
-    }
+    _appSettings.useSecondsBoolean = ((_appSettings.useSeconds==="TRUE")||(_appSettings.useSeconds===true));
 
     //Change HTTP protocol to HTTPs in URLs if necessary
     _appSettings = Utils.checkUrlProtocols(_appSettings);
 
     //Preload resources (if necessary)
-    Utils.preloadImages([_appSettings.backgroundMessage]);
+    //Utils.preloadImages([_appSettings.backgroundMessage]);
     //Utils.preloadAudios([_appSettings.soundBeep,_appSettings.soundNok,_appSettings.soundOk]); //Preload done through HTML audio tags
     //Utils.preloadVideos(["videos/some_video.mp4"]);
     Utils.log("App settings:", _appSettings);
@@ -140,7 +138,7 @@ export default function App() {
     const { hour, minutes, seconds } = _solution;
     const pad = (n) => n.toString().padStart(2, "0");
     let solutionStr = `${hour}:${pad(minutes)}`;
-    if (appSettings.useSeconds) solutionStr += `:${pad(seconds)}`;
+    if (appSettings.useSecondsBoolean) solutionStr += `:${pad(seconds)}`;
     Utils.log("solution: ", solutionStr);
     return checkResult(solutionStr);
   }

@@ -1,7 +1,7 @@
 export const DEFAULT_APP_SETTINGS = {
   skin: "STANDARD",
   actionWhenLoadingIfSolved: false,
-  useSeconds: true,
+  useSeconds: "TRUE",
   initialTime: "5:30:00", //Initial time in format "HH:MM:SS" or "HH:MM"
   backgroundImg: "images/basic_background.png",
   hourImg: "images/basic_hourhand.png",

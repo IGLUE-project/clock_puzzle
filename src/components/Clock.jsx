@@ -134,7 +134,7 @@ export default function Clock({ theme, setTime, dropHandle, solved, config }) {
       )}
 
       {/* Second hand */}
-      {config.useSeconds && (
+      {config.useSecondsBoolean && (
         <>
           {theme.secondImg ? (
             <img
